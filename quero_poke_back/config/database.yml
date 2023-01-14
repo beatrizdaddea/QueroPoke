@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: db
+  username: postgres
+  password: password
+  pool: 5
+
+development:
+  <<: *default
+  database: quero_poke_back_development
+
+
+test:
+  <<: *default
+  database: quero_poke_back_test
