@@ -17,3 +17,10 @@ services:
       - "3000:3000"
     depends_on:
       - db
+  queropoke-client:
+    build: ./queropoke-client
+    ports:
+    - "8000:8000"
+    volumes:
+    - './queropoke-client:/queropoke-client'
+    command: /bin/sh -c 'npm run dev '
